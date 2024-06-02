@@ -1,0 +1,388 @@
+.page {
+    margin: 0 auto;
+    padding: 0;
+    background: #f6fcff;
+}
+
+.page__wrapper {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Inter", "Arial", "Manrope", sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12);
+    background: #fff;
+}
+
+.header__lists {
+    margin: 0;
+    padding: 0;
+    width: 437px;
+    height: 65px;
+    /* text-align: right; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__title {
+    margin: 20px 0 0 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: -0.01em;
+    color: #252c32;
+    height: 44px;
+    width: 84px;
+    border-bottom: solid 1px #4094f7;
+    text-align: center;
+}
+
+.active {
+    border-bottom: solid 1px #4094f7
+}
+
+.header__block-logout {
+    margin: 0 8px 0 0;
+    padding: 0 8px 0 0;
+    width: 142px;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 2px dashed rgba(14, 115, 246, 0.2);
+}
+
+.header__name {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: -0.01em;
+    color: #0e73f6;
+}
+
+.header__button-logout {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.header__image-logout {
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.content {
+    margin: 0;
+    padding: 0;
+}
+
+.filter-menu {
+    margin: 0;
+    padding: 0;
+    height: 111px;
+    border-radius: 2px;
+    border-bottom: 2px solid #d7edff;
+}
+
+.filter__trips {
+    margin: 0;
+    padding: 10px 16px 6px 16px;
+    display: flex;
+    height: 41px;
+    align-items: center;
+    gap: 26px;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12);
+    background: #fff;
+}
+
+.filter__title-trips {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: #252c32;
+}
+
+.filter__add-trips {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 0 0 0 15px;
+    width: 178px;
+    height: 24px;
+    background: #4094f7;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: -0.01em;
+    color: #f6f8f9;
+    border: none;
+    gap: 11px;
+}
+
+.filter__image-trips {
+    margin: 0;
+    padding: 0;
+}
+
+.filter__period {
+    margin: 0 0 0 16px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter__period-lists {
+    margin: 6px 0 0 1px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter__period-start {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filter__period-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: -0.01em;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.filter__period-calendar {
+    background-image: url(./images/clear.svg);
+    background-repeat: no-repeat;
+    background-position: right 31px center, right center;
+    margin: 0;
+    padding: 0 0 0 11px;
+    border: 1px solid #dde2e4;
+    border-radius: 6px;
+    width: 167px;
+    height: 32px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: -0.01em;
+    color: #252c32;
+}
+
+.filter__period-search {
+    margin: 0 47px 0 0;
+    padding: 0;
+    width: 247px;
+
+}
+
+.filter__period-search-input {
+    margin: 0 0 0 17px;
+    padding: 0 0 0 11px;
+    border: 1px solid #dde2e4;
+    border-radius: 6px;
+    height: 32px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: -0.01em;
+    color: #9aa6ac;
+    background-image: url(./images/search.svg);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: right 7px center;
+}
+
+.filter__clear {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid rgba(64, 148, 247, 0.2);
+    ;
+}
+
+.filter__clear-all {
+    margin: 0;
+    padding: 0;
+    background-size: 10px;
+    background-image: url(./images/clear-all.svg);
+    background-repeat: no-repeat;
+    background-position: left 3px center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #4094f7;
+    border: none;
+    width: 101px;
+    background-color: transparent;
+    padding-left: 12px;
+}
+
+.filter__arhive {
+    margin: 0 16px 0 0;
+    padding: 8px 0 0 0;
+    width: 192px;
+    height: 16px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.filter__arhive-checkbox {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+}
+
+.filter__arhive-label {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #252c32;
+}
+
+.filter__line {
+    margin: 14px 0 0 0;
+    padding: 0;
+    border-radius: 2px 0 0 2px;
+    width: 360px;
+    height: 2px;
+    background: #4094f7;
+}
+
+.cards {
+    margin: 0 0 0 16px;
+    padding: 0;
+}
+
+.cards__trips {
+    margin: 0;
+    padding: 15px 0 0 0;
+    list-style-type: none;
+}
+
+.card__trip-lists {
+    margin: 0;
+    padding: 0;
+}
+
+.card__trip {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-radius: 6px;
+    width: 1416px;
+    height: 80px;
+    background: #fff;
+}
+
+.card__trip-list {
+    margin: 0;
+    padding: 0;
+}
+
+.card__trip-num {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #84919a;
+}
+
+.card__trip-numList {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: -0.01em;
+    color: #0e73f6;
+}
+
+.card__trip-data {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: -0.01em;
+    color: #252c32;
+}
+
+.card__trip-sum {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: -0.01em;
+    text-align: right;
+    color: rgba(25, 28, 48, 0.9);
+}
+
+.card__trip-city {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: -0.01em;
+    color: #252c32;
+}
+
+.card__trip-status {
+    margin: 0;
+    padding: 0;
+}
+
+.card__trip-statText {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #84919a;
+}
+
+.footer {
+    margin: 0;
+    padding: 0;
+}

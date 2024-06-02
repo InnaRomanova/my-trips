@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои поездки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+    <div class="page__wrapper">
+
+        <!--Блок header-->
+        <header class="header">
+            <div class="header__lists">
+                <h1 class="header__title active">Поездки</h1>
+            </div>
+
+            <div class="header__block-logout">
+                <h3 class="header__name">Заболоцкий К.О.</h3>
+                <button class="header__button-logout"><img class="header__image-logout" src="./images/Logout.svg"
+                        alt="Выход"></button>
+            </div>
+        </header>
+
+        <!--Блок main-->
+        <main class="content">
+
+            <!--Секция Меню-->
+            <section class="filter-menu">
+                <div class="filter__trips">
+                    <h1 class="filter__title-trips">Мои поездки</h1>
+                    <button class="filter__add-trips">
+                        <img class="filter__image-trips" src="./images/add-trips.svg" alt="оформить поездку">
+                        Оформить поездку
+                    </button>
+                </div>
+
+                <div class="filter__period">
+                    <div class="filter__period-lists">
+                        <div class="filter__period-start">
+                            <p class="filter__period-text">Период с: </p>
+                            <label class="filter__period-calendar-label">
+                                <input class="filter__period-calendar" type="date" name="calendar" value="2024-02-22">
+                            </label>
+                        </div>
+                        <div class="filter__period-start">
+                            <p class="filter__period-text">по: </p>
+                            <label>
+                                <input class="filter__period-calendar" type="date" name="calendar" value="Выбрать"
+                                    placeholder="Выбрать">
+                            </label>
+                        </div>
+
+                        <!--Кнопка поиска-->
+                        <form class="filter__period-search">
+                            <input class="filter__period-search-input" placeholder="Поиск...">
+                        </form>
+
+                        <!--Сбросить все-->
+                        <div class="filter__clear">
+                            <input class="filter__clear-all" type="reset" value="Сбросить все" />
+                        </div>
+                    </div>
+                    <!--Чекбокс "Показать архивные поездки"-->
+                    <div class="filter__arhive">
+                        <input class="filter__arhive-checkbox" type="checkbox" checked>
+                        <label class="filter__arhive-label">Показать архивные поездки</label>
+                    </div>
+                </div>
+
+                <div class="filter__line"></div>
+            </section>
+
+            <!--Секция Card-->
+            <section class="cards">
+                <ul class="cards__trips">
+                    <li class="card__trip-lists">
+                        <ul class="card__trip">
+                            <li class="card__trip-list">
+                                <p class="card__trip-num">№ поездки</p>
+                                <span class="card__trip-numList">000115</span>
+                            </li>
+
+                            <li class="card__trip-list">
+                                <p class="card__trip-num">Дата поездки</p>
+                                <span class="card__trip-data">22.02.2024 - 27.02.2024</span>
+                            </li>
+
+                            <li class="card__trip-list">
+                                <p class="card__trip-num">Сумма, план</p>
+                                <span class="card__trip-sum">29 400,00</span>
+                            </li>
+
+                            <li class="card__trip-list">
+                                <p class="card__trip-num">Сумма, факт</p>
+                                <span class="card__trip-sum">29 400,00</span>
+                            </li>
+
+                            <li class="card__trip-list">
+                                <p class="card__trip-num">Город</p>
+                                <span class="card__trip-city">Москва, Ярославль, Ижевск, Владимир</span>
+                            </li>
+
+                            <div class="card__trip-status">
+                                <p class="card__trip-statText">Статус</p>
+                                <button class="card__trip-btn"><a href="#"
+                                        class="card__trip-link">Документы</a></button>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <!--Блок Footer-->
+        <footer class="footer">
+
+        </footer>
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
