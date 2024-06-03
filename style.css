@@ -63,6 +63,7 @@
     justify-content: space-between;
     align-items: end;
     border-bottom: 2px dashed rgba(14, 115, 246, 0.2);
+    cursor: pointer;
 }
 
 .header__name {
@@ -139,6 +140,7 @@
     color: #f6f8f9;
     border: none;
     gap: 11px;
+    cursor: pointer;
 }
 
 .filter__image-trips {
@@ -247,6 +249,7 @@
     width: 101px;
     background-color: transparent;
     padding-left: 12px;
+    cursor: pointer;
 }
 
 .filter__arhive {
@@ -267,6 +270,7 @@
     width: 16px;
     height: 16px;
     background: #fff;
+    cursor: pointer;
 }
 
 .filter__arhive-label {
@@ -288,7 +292,7 @@
 }
 
 .cards {
-    margin: 0 0 0 16px;
+    margin: 0 0 0 8px;
     padding: 0;
 }
 
@@ -299,18 +303,32 @@
 }
 
 .card__trip-lists {
-    margin: 0;
+    margin: 0 0 8px 0;
     padding: 0;
+    width: 100%;
 }
 
 .card__trip {
     margin: 0;
-    padding: 0;
+    padding: 17px 0 0 24px;
     list-style-type: none;
     border-radius: 6px;
-    width: 1416px;
-    height: 80px;
+    height: 63px;
     background: #fff;
+    display: flex;
+    gap: 33px;
+    position: relative;
+    max-width: 1390px;
+}
+
+
+.card__trip_active {
+    border: 1px solid #9bcffd;
+    border-radius: 6px;
+    max-width: 1390px;
+    height: 61px;
+    background: #fff;
+    position: relative;
 }
 
 .card__trip-list {
@@ -318,8 +336,30 @@
     padding: 0;
 }
 
-.card__trip-num {
+.card__trip-listDate {
     margin: 0;
+    padding: 0;
+    width: 209px;
+}
+
+.card__trip-listSum {
+    margin: 0;
+    padding: 0;
+    width: 78px;
+    text-align: center;
+}
+
+.card__trip-listSity {
+    margin: 0;
+    padding: 0;
+    max-width: 535px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card__trip-num {
+    margin: 0 0 8px 0;
     padding: 0;
     font-weight: 400;
     font-size: 12px;
@@ -329,12 +369,13 @@
 
 .card__trip-numList {
     margin: 0;
-    padding: 0;
+    padding: 0 0 4px 0;
     font-weight: 400;
     font-size: 14px;
     line-height: 171%;
     letter-spacing: -0.01em;
     color: #0e73f6;
+    border-bottom: 2px solid rgba(64, 148, 247, 0.2);
 }
 
 .card__trip-data {
@@ -368,13 +409,40 @@
     color: #252c32;
 }
 
-.card__trip-status {
+.card__trip-cityImage {
+    position: absolute;
+    right: 253px;
+    bottom: 19px;
+}
+
+.card__trip-cityImage:hover {
+    cursor: url(./images/cursor.svg), auto;
+}
+
+.card__trip-cityImage:hover::after {
+    content: attr(data-title);
+    background-color: #303940;
+    color: #f6f8f9;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    width: 219px;
+    z-index: 2;
+}
+
+.card__trip-list:last-child {
     margin: 0;
     padding: 0;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    text-align: center;
 }
 
 .card__trip-statText {
-    margin: 0;
+    margin: 0 0 8px 0;
     padding: 0;
     font-weight: 400;
     font-size: 12px;
@@ -382,7 +450,100 @@
     color: #84919a;
 }
 
+.card__trip-btn {
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    width: 84px;
+    height: 24px;
+    background: #eef0f2;
+    border: none;
+    text-align: center;
+    border: none;
+}
+
+.card__trip-link {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #5b6871;
+    text-decoration: none;
+
+}
+
 .footer {
     margin: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 1395px) {
+    .card__trip-listSity {
+        margin: 0;
+        padding: 0;
+        max-width: 350px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: relative;
+    }
+
+    .card__trip-cityImage {
+        position: absolute;
+        right: 0;
+        bottom: 19px;
+    }
+}
+
+@media screen and (max-width: 1058px) {
+    .filter-menu {
+        min-height: 132px;
+    }
+
+    .filter__period {
+        align-items: end;
+        flex-direction: column;
+    }
+
+    .filter__line {
+        display: none;
+    }
+
+    .card__trip-listSity {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 953px) {
+    .filter__period {
+        display: flow;
+    }
+
+    .filter-menu {
+        min-height: 142px;
+    }
+
+    .card__trip {
+        gap: 10px;
+    }
+
+    .card__trip-listDate {
+        max-width: max-content;
+    }
+
+    .card__trip-listSum {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 801px) {
+    .filter-menu {
+        min-height: 193px;
+    }
+
+    .filter__period-lists {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
