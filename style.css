@@ -1,3 +1,6 @@
+@import url(./fonts/normalize.css);
+@import url(./fonts/inter.css);
+
 .page {
     margin: 0 auto;
     padding: 0;
@@ -539,11 +542,36 @@
 
 @media screen and (max-width: 801px) {
     .filter-menu {
-        min-height: 193px;
+        height: 100%;
     }
 
     .filter__period-lists {
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    .card__trip {
+        gap: 10px;
+        display: grid;
+        grid-template-columns: 113px 200px 83px;
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 571px) {
+    .header__lists {
+        margin-left: 10px;
+        justify-content: flex-start;
+    }
+
+    .card__trip {
+        grid-template-columns: 163px 200px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 511px) {
+    .card__trip-list:last-child {
+        top: 134px;
     }
 }
